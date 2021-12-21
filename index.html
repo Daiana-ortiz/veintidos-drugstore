@@ -42,10 +42,35 @@
         </nav>
 
         <div class="icons">
-            <a href="#"class="fas fa-shopping-cart"></a>
-            <a href="#"class="fas fa-heart"></a>
-            <a href="#"class="fas fa-user-circle"></a>
+            <a id=#cart href="#" class="fas fa-shopping-cart">
+                <!-- Carrito -->
+                <div class="carrito">
+                    <h2>Carrito:</h2>
+                    <!-- Elementos del carrito -->
+                    <ul id="carrito" class="productList">
+                        <li class="item">
+                            <img src="images/aguila.jpg" alt="">
+                            1 x Alfajor Aguila
+                        </li>
+                        <li class="item">
+                            <img src="images/aguila.jpg" alt="">
+                            1 x Alfajor Aguila
+                        </li>
+                        <li class="item">
+                            <img src="images/aguila.jpg" alt="">
+                            1 x Alfajor Aguila
+                        </li>
+                    </ul>
+                    <hr>
+                    <!-- Precio total -->
+                    <p class="text-right">Total: <span id="total"></span>$</p>
+                    <button id="boton-vaciar" class="btn">Vaciar</button>
+                </div>
+            </a>
+            <a id=#heart href="#" class="fas fa-heart"></a>
+            <a id="circle" 3href="#" class="fas fa-user-circle"></a>
         </div>
+
     </div>
 
 </header>
@@ -142,234 +167,6 @@
 <section class="product" id="product">
 
     <h1 class="heading">Catálogo</h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <span class="discount">En stock</span>
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <img src="images/turron.jpg" alt="">
-            <h3>Turrón</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> $35.00</div>
-            <div class="quantity">
-                <span>Cantidad </span>
-                <input type="number" min="1" max="1000" value="1">
-                <span> u.</span>
-            </div>
-            <a href="#" class="btn"> Agregar al carrito</a>
-        </div>
-
-        <div class="box">
-            <span class="discount">Sin Stock</span>
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <img src="images/block.jpg" alt="">
-            <h3>Cofler Block 110gm.</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> $150.00</div>
-            <div class="quantity">
-                <span>Cantidad </span>
-                <input type="number" min="1" max="1000" value="1">
-                <span> u.</span>
-            </div>
-            <a href="#" class="btn"> Agregar al carrito</a>
-        </div>
-
-        <div class="box">
-            <span class="discount">En Stock</span>
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <img src="images/mogul.jpg" alt="">
-            <h3>Rollo Mogul</h3>
-            <div class="stars">
-                <i class="fasfa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> $30.00</div>
-            <div class="quantity">
-                <span>Cantidad </span>
-                <input type="number" min="1" max="1000" value="1">
-                <span> u.</span>
-            </div>
-            <a href="#" class="btn"> Agregar al carrito</a>
-        </div>
-
-        <div class="box">
-            <span class="discount">En Stock</span>
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <img src="images/pipas.jpg" alt="">
-            <h3>Pipas Gigantes</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> $50.00</div>
-            <div class="quantity">
-                <span>Cantidad </span>
-                <input type="number" min="1" max="1000" value="1">
-                <span> u.</span>
-            </div>
-            <a href="#" class="btn"> Agregar al carrito</a>
-        </div>
-
-        <div class="box">
-            <span class="discount">En Stock</span>
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <img src="images/aguila.jpg" alt="">
-            <h3>Alfajor Aguila</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> $100.00</div>
-            <div class="quantity">
-                <span>Cantidad </span>
-                <input type="number" min="1" max="1000" value="1">
-                <span> u.</span>
-            </div>
-            <a href="#" class="btn"> Agregar al carrito</a>
-        </div>
-
-        <div class="box">
-            <span class="discount">En Stock</span>
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <img src="images/paraguitas.jpg" alt="">
-            <h3>Paraguitas</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> $50.00</div>
-            <div class="quantity">
-                <span>Cantidad </span>
-                <input type="number" min="1" max="1000" value="1">
-                <span> u.</span>
-            </div>
-            <a href="#" class="btn"> Agregar al carrito</a>
-        </div>
-
-        <div class="box">
-            <span class="discount">En Stock</span>
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <img src="images/huevo.jpg" alt="">
-            <h3>Huevo Kinder</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> $130.00</div>
-            <div class="quantity">
-                <span>Cantidad </span>
-                <input type="number" min="1" max="1000" value="1">
-                <span> u.</span>
-            </div>
-            <a href="#" class="btn"> Agregar al carrito</a>
-        </div>
-
-        <div class="box">
-            <span class="discount">En Stock</span>
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <img src="images/kinder.jpg" alt="">
-            <h3>Kinder Bueno</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> $140.00</div>
-            <div class="quantity">
-                <span>Cantidad </span>
-                <input type="number" min="1" max="1000" value="1">
-                <span> u.</span>
-            </div>
-            <a href="#" class="btn"> Agregar al carrito</a>
-        </div>
-
-        <div class="box">
-            <span class="discount">En Stock</span>
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-share"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <img src="images/doscorazones.jpg" alt="">
-            <h3>Dos Corazones</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas  fa-star"></i>
-                <i class="fas  fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <div class="price"> $60.00</div>
-            <div class="quantity">
-                <span>Cantidad </span>
-                <input type="number" min="1" max="1000" value="1">
-                <span> u.</span>
-            </div>
-            <a href="#" class="btn"> Agregar al carrito</a>
-        </div>
-    </div>
 
 </section>
 

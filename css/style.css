@@ -146,15 +146,64 @@ section{
     color:var(--rojo)
 }
 
+
+
+.header-2 .icons .carrito{
+    position: absolute;
+    background: white;
+    height: auto;
+    width: 220px;
+    top: 60px;
+    color: black;
+    box-shadow: -1px 0px 35px 10px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
+
+.header-2 .icons .carrito h2{
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+.header-2 .icons .carrito .productList{
+    list-style: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: solid rgb(194, 194, 194) 1px;
+}
+
+.header-2 .icons .carrito .productList img{
+    height: 30px;
+    width: 30px;
+}
+
+.header-2 .icons .carrito .productList .item{
+    margin-bottom: 10px;
+}
+
+.header-2 .icons .carrito .text-right{
+    font-size: 20px;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.header-2 .icons .carrito .btn{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+
 .header-2 .icons a{
     font-size: 2.5rem;
     color:var(--white);
     padding-left: 1rem;
 }
 
-.header-2 .icons a:hover{
-    font-size: 3.5rem;
-}
 
 #menu-bar{
     font-size: 3rem;
@@ -272,13 +321,16 @@ section{
     display: block;
 }
 
-.product .box-container{
+/* product styling */
+
+
+.product-box-container{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem ;
 }
 
-.product .box-container .box{
+.product-box{
     flex:1 1 30rem;
     text-align: center;
     padding: 2rem;
@@ -286,88 +338,26 @@ section{
     border-radius: .5rem;
     overflow: hidden;
     position: relative;
-
 }
 
-.product .box-container .box img{
+.img-fluid{
     height: 20rem;
 }
 
-.product .box-container .box .discount{
-    position: absolute; 
-    top:1rem; left: 1rem;
-    background: rgba(255, 135, 135, 0.1) ;
-    color: var(--rojo);
-    padding: .7rem 1rem;
-    font-size: 2rem;
-}
 
-.product .box-container .box .icons{
-    position: absolute;
-    top: .5rem; right: -6rem;
-}
-
-.product .box-container .box:hover .icons{
-    right: 1rem;
-}
-
-.product .box-container .box .icons a{
-    display: block;
-    height: 4.5rem;
-    width: 4.5rem;
-    line-height: 4.5rem;
-    font-size: 1.7rem;
-    color: var(--white);
-    border-radius: 50%;
-    margin-top: .7rem;
-    background-color: red;
-    
-}
-
-.product .box-container .box h3{
+.box-title{
     color: var(--rojo);
     font-size: 2.5rem;
 }
 
-.product .box-container .box .stars i{
-    padding: 1rem .1rem;
-    font-size: 1.7rem;
-    color: gold;
-}
 
-.product .box-container .box .price{
+.price{
     font-size: 2rem;
     color: #333;
     padding: .5rem 0;
 }
 
-.product .box-container .box .price span{
-    font-size: 1.5rem;
-    color: #999;
-    text-decoration: line-through;
-}
-
-.product .box-container .box .quantity{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 1rem;
-    padding-bottom: .5rem ;
-}
-
-.product .box-container .box .quantity input{
-border: 2px solid rgba(0,0,0,.3);
-font-size: 1.5rem;
-font-weight: boler;
-color: var(--black);
-padding: .5rem;
-background:rgba(0,0,0,.05);
-margin: 0 .5rem 0 .5rem;
-}
-
-.product .box-container .box .btn {
-    display: block;
-}
+/* end product styling */
 
 .deal {
     background: url(../images/familia.jpg) no-repeat;
