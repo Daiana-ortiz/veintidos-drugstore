@@ -29,11 +29,11 @@
         </form>
     </div>
 
-    <div class="header-2">
+    <div id="header-2" class="header-2">
 
         <div id="menu-bar" class="fas fa-bars"></div>
 
-        <nav class="navbar">
+        <nav id="navbar" class="navbar">
             <a href="#home">Home</a>
             <a href="#category">Categoria</a>
             <a href="#product">Productos</a>
@@ -42,29 +42,17 @@
         </nav>
 
         <div class="icons">
-            <a id=#cart href="#" class="fas fa-shopping-cart">
+            <a id=#cart href="#" class="fas fa-shopping-cart" onclick="event.preventDefault()">
                 <!-- Carrito -->
-                <div class="carrito">
+                <div class="carrito" id="hiddenCart">
                     <h2>Carrito:</h2>
                     <!-- Elementos del carrito -->
                     <ul id="carrito" class="productList">
-                        <li class="item">
-                            <img src="images/aguila.jpg" alt="">
-                            1 x Alfajor Aguila
-                        </li>
-                        <li class="item">
-                            <img src="images/aguila.jpg" alt="">
-                            1 x Alfajor Aguila
-                        </li>
-                        <li class="item">
-                            <img src="images/aguila.jpg" alt="">
-                            1 x Alfajor Aguila
-                        </li>
                     </ul>
                     <hr>
                     <!-- Precio total -->
                     <p class="text-right">Total: <span id="total"></span>$</p>
-                    <button id="boton-vaciar" class="btn">Vaciar</button>
+                    <button onclick="event.preventDefault()" id="boton-vaciar" class="btn">Vaciar</button>
                 </div>
             </a>
             <a id=#heart href="#" class="fas fa-heart"></a>
@@ -165,9 +153,9 @@
 <!-- product section starts -->
 
 <section class="product" id="product">
-
+    
     <h1 class="heading">Catálogo</h1>
-
+    <div class="wrapper" id="wrapper"></div>
 </section>
 
 <!-- product section ends -->
@@ -310,6 +298,7 @@
 
 <!-- custom js file link-->
 <script src="js/script.js"></script> 
-    
+<script src="carrito.js"></script>  
+
 </body>
 </html>

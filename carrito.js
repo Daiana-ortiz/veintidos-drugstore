@@ -1,4 +1,4 @@
-window.onload = function () {
+
     // Variables
     const baseDeDatos = [
         {
@@ -9,7 +9,7 @@ window.onload = function () {
         },
         {
             id: 2,
-            nombre: 'Cofler Block 110g',
+            nombre: 'Cofler Block',
             precio: 200,
             imagen: 'images/block.jpg'
         },
@@ -54,14 +54,20 @@ window.onload = function () {
 
     let carrito = [];
     let total = 0;
-    const DOMitems = document.querySelector('#product');
+    const DOMitems = document.querySelector('#wrapper');
     const DOMcarrito = document.querySelector('#carrito');
     const DOMtotal = document.querySelector('#total');
     const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+    const DOMIconoCarrito = document.getElementById('#cart')
+    const hiddenCart = document.querySelector('#hiddenCart')
     const miLocalStorage = window.localStorage;
+
 
     // Funciones
 
+    DOMIconoCarrito.addEventListener('click', () =>{
+        hiddenCart.classList.toggle('hide');
+    });
     /**
     * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
     */
@@ -89,17 +95,20 @@ window.onload = function () {
             miNodoPrecio.classList.add('price');
             miNodoPrecio.textContent = info.precio + '$';
             // Boton 
-            const miNodoBoton = document.createElement('input');
-            miNodoBoton.type= "number"
+            
+            const miNodoBoton = document.createElement('button');
+            miNodoBoton.classList.add('btn');
             miNodoBoton.setAttribute('marcador', info.id);
-            miNodoBoton.addEventListener('onchange', anyadirProductoAlCarrito);
+            miNodoBoton.textContent = 'Añadir al carrito';
+            miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+    
             // Insertamos
-            miNodoCardBody.appendChild(miNodoTitle);
+            DOMitems.appendChild(miNodo);
+            miNodo.appendChild(miNodoCardBody);
             miNodoCardBody.appendChild(miNodoImagen);
+            miNodoCardBody.appendChild(miNodoTitle);
             miNodoCardBody.appendChild(miNodoPrecio);
             miNodoCardBody.appendChild(miNodoBoton);
-            miNodo.appendChild(miNodoCardBody);
-            DOMitems.appendChild(miNodo);
         });
     }
 
@@ -143,9 +152,8 @@ window.onload = function () {
             miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}$`;
             // Boton de borrar
             const miBoton = document.createElement('button');
-            miBoton.classList.add('btn');
-            miBoton.textContent = 'X';
-            miBoton.style.marginLeft = '1rem';
+            miBoton.classList.add('btn-delete');
+            miBoton.textContent = 'Eliminar';
             miBoton.dataset.item = item;
             miBoton.addEventListener('click', borrarItemCarrito);
             // Mezclamos nodos
@@ -220,9 +228,9 @@ window.onload = function () {
     // Eventos
     DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
+
     // Inicio
     cargarCarritoDeLocalStorage();
     renderizarProductos();
     calcularTotal();
     renderizarCarrito();
-}
