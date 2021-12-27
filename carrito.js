@@ -101,7 +101,10 @@
             miNodoBoton.setAttribute('marcador', info.id);
             miNodoBoton.textContent = 'Añadir al carrito';
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-    
+            miNodoBoton.addEventListener('click', () =>{
+                hiddenCart.classList.add('carrito');
+            });
+
             // Insertamos
             DOMitems.appendChild(miNodo);
             miNodo.appendChild(miNodoCardBody);
@@ -125,6 +128,8 @@
         // Actualizamos el LocalStorage
         guardarCarritoEnLocalStorage();
     }
+
+
 
     /**
     * Dibuja todos los productos guardados en el carrito
