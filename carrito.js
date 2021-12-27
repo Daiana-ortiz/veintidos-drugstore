@@ -58,15 +58,15 @@
     const DOMcarrito = document.querySelector('#carrito');
     const DOMtotal = document.querySelector('#total');
     const DOMbotonVaciar = document.querySelector('#boton-vaciar');
-    const DOMIconoCarrito = document.getElementById('#cart')
-    const hiddenCart = document.querySelector('#hiddenCart')
+    const DOMIconoCarrito = document.querySelector('#cart')
+    const hiddenCart = document.querySelector('#showCart')
     const miLocalStorage = window.localStorage;
 
 
     // Funciones
 
     DOMIconoCarrito.addEventListener('click', () =>{
-        hiddenCart.classList.toggle('hide');
+        hiddenCart.classList.toggle('carrito');
     });
     /**
     * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
