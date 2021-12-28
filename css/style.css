@@ -379,6 +379,14 @@ section{
     padding: .5rem 0;
 }
 
+.botones{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 60%;
+    padding-bottom: 30px;
+}
+
 /* end product styling */
 
 .deal {
