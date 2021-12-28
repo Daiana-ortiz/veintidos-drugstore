@@ -157,10 +157,10 @@
     <h1 class="heading">Catálogo</h1>
 
     <div class="botones">
-        <a class="btn" title="Todos" id="filter-btn">Todos</a>
-        <a class="btn" title="Chocolates "id="filter-btn">Chocolates</a>
-        <a class="btn" title="Golosinas" id="filter-btn">Golosinas</a>
-        <a class="btn" title="Snacks" id="filter-btn">Snacks</a>
+        <button class="btn"  data-fiter="todos" id="filter-btn" onclick=filterProducts(event)>Todos<button/>
+        <button class="btn"  data-fiter="chocolates" id="filter-btn" onclick=filterProducts(event)>Chocolates<button/>
+        <button class="btn"  data-fiter="golosinas" id="filter-btn" onclick=filterProducts(event)>Golosinas<button/>
+        <button class="btn"  data-fiter="snacks" id="filter-btn" onclick=filterProducts(event)>Snacks<button/>
     </div>
     <div class="wrapper" id="wrapper"></div>
 </section>

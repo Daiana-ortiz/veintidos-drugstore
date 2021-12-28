@@ -242,45 +242,18 @@
     DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
 
-    
-
-//Funciones del filtro -> Recibe la categoria, hace el filtro y lo imprime en la web
-const filterButton = document.querySelectorAll('#filter-btn');
-
-
-const filterCategory = (categoria) => {
-	let categoryArray = baseDeDatos.filter(
-		(valor) => valor.categoria === categoria
-	);
-	renderizarProductos(categoryArray);
-};
 
 // funcion para filtrar el listado de productos
 
 function filterProducts(e) {
-	filterButton.forEach((button) => {
-		button.addEventListener('click', (e) => {
-			let buttonAlt = e.path[0].title;
-			console.log(buttonAlt);
-
-			if (buttonAlt === 'Todos') {
-				renderizarProductos(baseDeDatos);
-			}
-
-			if (buttonAlt === 'Chocolates') {
-				filterCategory('chocolate');
-			}
-
-			if (buttonAlt === 'Golosinas') {
-				filterCategory('golosina');
-			}
-
-			if (buttonAlt === 'Snacks') {
-				filterCategory('snacks');
-			}
-		});
-	});
-}
+    const productos = document.querySelectorAll(".wrapper div"); // selecciona todos los div de productos
+    let filter = baseDeDatos.categoria; // graba el valor en el event target's data-filter attribute
+    baseDeDatos.forEach(producto => {
+      producto === filter
+      ? productos.classList.remove('.showCart') // if yes, make sure .hidden is not applied
+      : productos.classList.add('showCart'); // if no, apply .hidden
+    });
+  };
 
     // Inicio
     cargarCarritoDeLocalStorage();
