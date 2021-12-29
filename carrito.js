@@ -6,56 +6,56 @@
             nombre: 'Turron',
             precio: 30,
             imagen: 'images/turron.jpg',
-            categoria: "golosina"
+            categoria: "Golosinas"
         },
         {
             id: 2,
             nombre: 'Cofler Block',
             precio: 200,
             imagen: 'images/block.jpg',
-            categoria: "chocolate"
+            categoria: "Chocolates"
         },
         {
             id: 3,
             nombre: 'Rollo Mogul',
             precio: 45,
             imagen: 'images/mogul.jpg',
-            categoria: "golosina"
+            categoria: "Golosinas"
         },
         {
             id: 4,
             nombre: 'Pipas gigantes',
             precio: 80,
             imagen: 'images/pipas.jpg',
-            categoria: "snacks"
+            categoria: "Snacks"
         },
         {
             id: 5,
             nombre: 'Alfajor Aguila',
             precio: 120,
             imagen: 'images/aguila.jpg',
-            categoria: "chocolate"
+            categoria: "Chocolates"
         },
         {
             id: 6,
             nombre: 'Paraguitas',
             precio: 65,
             imagen: 'images/paraguitas.jpg',
-            categoria: "chocolate"
+            categoria: "Chocolates"
         },
         {
             id: 7,
             nombre: 'Huevo Kinder',
             precio: 220,
             imagen: 'images/huevo.jpg',
-            categoria: "chocolate"
+            categoria: "Chocolates"
         },
         {
             id: 8,
             nombre: 'Kinder Bueno',
             precio: 250,
             imagen: 'images/kinder.jpg',
-            categoria: "chocolate"
+            categoria: "Chocolates"
         }
 
     ];
@@ -243,17 +243,53 @@
 
 
 
-// funcion para filtrar el listado de productos
+// FILTROOOO
 
-function filterProducts(e) {
-    const productos = document.querySelectorAll(".wrapper div"); // selecciona todos los div de productos
-    let filter = baseDeDatos.categoria; // graba el valor en el event target's data-filter attribute
-    baseDeDatos.forEach(producto => {
-      producto === filter
-      ? productos.classList.remove('.showCart') // if yes, make sure .hidden is not applied
-      : productos.classList.add('showCart'); // if no, apply .hidden
+const botonera = document.querySelector("#botonera");
+
+const categorias = () => {
+    const categories = [];
+    baseDeDatos.forEach((prod) => {
+      !categories.some((cat) => cat === prod.categoria)
+        ? categories.push(prod.categoria)
+        : "";
     });
+    return categories;
   };
+
+  const botoneraFiltros = () => {
+    botonera.innerHTML = `${categorias()
+      .map((cat) => `<button class="btn" data-category="${cat}">${cat}</button>`)
+      .join("")}`;
+  };
+
+
+  const renderizarCarro = (prods) => {
+    DOMitems.innerHTML = `${prods.map((p) => 
+        `<div class="product-box-container">
+            <div class="product-box">
+                <img class="img-fluid" src="${p.imagen}">
+                <h3 class="box-title">${p.nombre}</h3>
+                <div class="price"> ${p.precio} $</div>
+            <button class="btn" marcador="1">Añadir al carrito</button>
+            </div>
+        </div>`
+        ).join("")}`;
+  };
+
+  const filtrarProds = (e) => {
+    const element = e.target;
+    const category = element.dataset.category;
+    const prodFiltrados = baseDeDatos.filter((p) => p.categoria === category);
+    renderizarCarro(prodFiltrados);
+  };
+
+  const init = () => {
+    botonera.addEventListener("click", filtrarProds);
+    botoneraFiltros();
+    renderizarProductos(baseDeDatos);
+  };
+  init();
 
     // Inicio
     cargarCarritoDeLocalStorage();
