@@ -247,8 +247,9 @@
 
 const botonera = document.querySelector("#botonera");
 
+
 const categorias = () => {
-    const categories = [];
+    const categories = ["Todos"];
     baseDeDatos.forEach((prod) => {
       !categories.some((cat) => cat === prod.categoria)
         ? categories.push(prod.categoria)
@@ -258,10 +259,11 @@ const categorias = () => {
   };
 
   const botoneraFiltros = () => {
-    botonera.innerHTML = `${categorias()
-      .map((cat) => `<button class="btn" data-category="${cat}">${cat}</button>`)
-      .join("")}`;
+    botonera.innerHTML = 
+    `${categorias().map((cat) => 
+    `<button class="btn" data-category="${cat}">${cat}</button>`).join("")}`;
   };
+
 
 
   const renderizarCarro = (prods) => {
@@ -280,6 +282,10 @@ const categorias = () => {
   const filtrarProds = (e) => {
     const element = e.target;
     const category = element.dataset.category;
+    if ( category === "Todos"){
+        renderizarProductos(baseDeDatos);
+        return;
+    }
     const prodFiltrados = baseDeDatos.filter((p) => p.categoria === category);
     renderizarCarro(prodFiltrados);
   };
