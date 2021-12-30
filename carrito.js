@@ -299,6 +299,14 @@ const categorias = () => {
 
     // Inicio
     cargarCarritoDeLocalStorage();
-    renderizarProductos();
     calcularTotal();
     renderizarCarrito();
+
+
+    // funcion para boton link
+
+    function visitPage() {
+        window.location='/checkout.html';
+    }
+
+   

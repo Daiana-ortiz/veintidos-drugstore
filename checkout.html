@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veintidos Drugstore</title>
+
+    <!-- font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link-->
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+<!-- header section stars-->
+
+<header>
+
+    <div class="header-1">
+        <a href="#home" class="logo"><i class="fas fa-shopping-basket"></i>Veintidos Drugstore</a>
+
+        <form action="" class="search-box-container">
+            <input type="search" id="search-box" placeholder="Buscar producto">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </div>
+
+    <div id="header-2" class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav id="navbar" class="navbar">
+            <a href="index.html">Home</a>
+            <a href="index.html#category">Categoria</a>
+            <a href="index.html#product">Productos</a>
+            <a href="index.html#deal">Ofertas</a>
+            <a href="index.html#contact">Contacto</a>
+        </nav>
+
+        <div class="icons">
+            <a id="cart" href="#" class="fas fa-shopping-cart" onclick="event.preventDefault()">
+                <!-- Carrito -->
+                <div class="showCart" id="showCart">
+                    <h2>Carrito:</h2>
+                    <!-- Elementos del carrito -->
+                    <ul id="carrito" class="productList"></ul>
+                    <hr>
+                    <!-- Precio total -->
+                    <p class="text-right">Total: <span id="total"></span>$</p>
+                    <button onclick="event.preventDefault()" id="boton-vaciar" class="btn shop">Vaciar</button>
+                    <button onclick="event.preventDefault()" id="boton-comprar" class="btn ">Comprar</button>
+                </div>
+            </a>
+            <a id=#heart href="#" class="fas fa-heart"></a>
+            <a id="circle" 3href="#" class="fas fa-user-circle"></a>
+        </div>
+
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+
+<section>
+    
+    <h2 class="heading">Finalizá tu compra</h2>
+    <div class="flex">
+    <div class="carrito" id="showCart">
+        <h2>Tu carrito de compras</h2>
+        <!-- Elementos del carrito -->
+        <ul id="carrito" class="productList"></ul>
+        <hr>
+        <!-- Precio total -->
+        <p class="text-right">Total: <span id="total"></span>$</p>
+        <button onclick="event.preventDefault()" id="boton-vaciar" class="btn shop">Vaciar</button>
+        <button onclick="visitPage()" id="boton-comprar" class="btn ">Comprar</button>
+    </div>
+
+    <section class="contact " id="contact">
+
+
+        <form action="">
+
+            <div class="inputBox">
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Mail">
+            </div>
+
+            <div class="inputBox">
+                <input type="number" placeholder="Telefono">
+                <input type="text" placeholder="Motivo">
+            </div>
+
+            <textarea placeholder="Mensaje" name="" id="" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="Enviar mensaje" class="btn">
+
+        </form>
+    </section>
+    </div>
+</section>
+
+<!-- newsletter section starts-->
+
+<section class="newsletter">
+
+    <h3>Suscribite para enterarte de las últimas novedades</h3>
+
+    <form action="">
+        <input class="box" type="email" placeholder="Email">
+        <input type="submit" value="Suscribite" class="btn">
+    </form>
+
+</section>
+
+<!-- newsletter section ends-->
+
+<!-- footer section ends-->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <a href="#home" class="logo footer"><i class="fas fa-shopping-basket"></i>Veintidos Drugstore</a>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Quaerat facilis at, natus voluptates amet incidunt praesentium delectus nesciunt labore impedit veritatis illum ex maxime 
+                facere dolorem dignissimos, suscipit officiis excepturi.</p>
+            <div class="share">
+                <a href="https://www.facebook.com/Veintidos-Drugstore-106972638154025/?ref=py_c" class="btn fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/veintidosdrugstore/" class="btn fab fa-instagram"></a>   
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Nuestra ubicación</h3>
+            <div class="links">
+                <a href="#"> Buenos Aires, Avellaneda</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Enlaces rápidos</h3>
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#category">Categoria</a>
+                <a href="#product">Productos</a>
+                <a href="#deal">Ofertas</a>
+                <a href="#contact">Contacto</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Descargar aplicación</h3>
+            <div class="links">
+                <a href="#">Google Play</a>
+                <a href="#">Window XP</a>
+                <a href="#">App Store</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <h1 class="credit"> Creado por <span>Daiana Ortiz</span> | todos los derechos reservados!</h1>
+
+</section>
+
+<!-- footer section ends-->
+
+
+
+<!-- custom js file link-->
+<script src="carrito.js"></script>  
+
+</body>
+</html>

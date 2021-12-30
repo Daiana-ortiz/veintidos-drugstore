@@ -58,6 +58,28 @@ section{
     
 }
 
+.vaciar{
+    background: white;
+    color: red;
+    border: red solid 2px;
+}
+
+.comprar{
+    display: flex;
+}
+
+.shop:hover{
+    background: rgb(255, 167, 167);
+    color: white;
+    border: none;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
 .heading{
     text-align: center;
     color: red;
@@ -444,6 +466,8 @@ section{
     font-size: 2rem;
 
 }
+
+
 
 .contact form{
     text-align: center;
