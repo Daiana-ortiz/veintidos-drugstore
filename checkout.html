@@ -70,55 +70,13 @@
     
     <h2 class="heading">Finalizá tu compra</h2>
     <div class="flex">
-    <div class="carrito" id="showCart">
-        <h2>Tu carrito de compras</h2>
-        <!-- Elementos del carrito -->
-        <ul id="carrito" class="productList"></ul>
-        <hr>
-        <!-- Precio total -->
-        <p class="text-right">Total: <span id="total"></span>$</p>
-        <button onclick="event.preventDefault()" id="boton-vaciar" class="btn shop">Vaciar</button>
-        <button onclick="visitPage()" id="boton-comprar" class="btn ">Comprar</button>
+    <div class="carrito" id="compra">
+       
     </div>
 
-    <section class="contact " id="contact">
-
-
-        <form action="">
-
-            <div class="inputBox">
-                <input type="text" placeholder="Nombre">
-                <input type="email" placeholder="Mail">
-            </div>
-
-            <div class="inputBox">
-                <input type="number" placeholder="Telefono">
-                <input type="text" placeholder="Motivo">
-            </div>
-
-            <textarea placeholder="Mensaje" name="" id="" cols="30" rows="10"></textarea>
-
-            <input type="submit" value="Enviar mensaje" class="btn">
-
-        </form>
-    </section>
-    </div>
+    
 </section>
 
-<!-- newsletter section starts-->
-
-<section class="newsletter">
-
-    <h3>Suscribite para enterarte de las últimas novedades</h3>
-
-    <form action="">
-        <input class="box" type="email" placeholder="Email">
-        <input type="submit" value="Suscribite" class="btn">
-    </form>
-
-</section>
-
-<!-- newsletter section ends-->
 
 <!-- footer section ends-->
 
@@ -176,7 +134,8 @@
 
 
 <!-- custom js file link-->
-<script src="carrito.js"></script>  
+<script src="carrito.js"></script>
+<script src="js/compra.js"></script>
 
 </body>
 </html>

@@ -230,6 +230,9 @@
         miLocalStorage.setItem('carrito', JSON.stringify(carrito));
     }
 
+
+
+
     function cargarCarritoDeLocalStorage () {
         // ¿Existe un carrito previo guardado en LocalStorage?
         if (miLocalStorage.getItem('carrito') !== null) {
@@ -303,10 +306,22 @@ const categorias = () => {
     renderizarCarrito();
 
 
+
     // funcion para boton link
 
     function visitPage() {
         window.location='/checkout.html';
     }
+
+  
+    
+    
+
+
+    
+
+   
+    
+    
 
    
