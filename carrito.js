@@ -309,19 +309,16 @@ const categorias = () => {
 
     // funcion para boton link
 
-    function visitPage() {
-        window.location='/checkout.html';
+    const procesarPedidoBtn = document.getElementById('boton-comprar')
+    procesarPedidoBtn.addEventListener('click', (e) => {procesarPedido(e)});
+
+    function procesarPedido(e){
+        e.preventDefault();
+
+        if( miLocalStorage.length === 0 ){
+            alert("El carrito esta vacio, agregá algun producto")
+        } else {
+            location.href = "checkout.html";
+        }
+        
     }
-
-  
-    
-    
-
-
-    
-
-   
-    
-    
-
-   
