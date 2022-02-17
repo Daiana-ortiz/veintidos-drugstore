@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- custom css file link-->
+    <link rel="stylesheet" href="css/checkout.css">
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -68,18 +69,114 @@
 
 <section>
     
-    <h2 class="heading">Finalizá tu compra</h2>
-    <div class="flex">
-    <div class="carrito" id="comprar">
-        <h2>Tu carrito de compras</h2>
-        <!-- Elementos del carrito -->
-        <ul id="carrito" class="productList"></ul>
-        <hr>
-        <!-- Precio total -->
-        <p class="text-right">Total: <span id="total"></span>$</p>
-       
-    </div>
 
+
+    <div class="checkout-background">
+
+        <h2 class="heading">Finaliza tu compra</h2>
+
+        <main class="checkout">
+
+            
+            <div class="checkout-form-main">
+                
+                <div class="checkout-form-container">
+                    
+                    
+
+                    <div class="form-left">
+                        <div class="checkout-form" id="checkout-form">
+                            <label for="first-name-field" class="required">Nombre</label>
+                            <input type="text" id="first-name-field">
+                            <small>Hay un error</small>
+                        </div>
+                        <div class="checkout-form" id="checkout-form">
+                            <label for="last-name-field" class="required">Apellido</label>
+                            <input type="text" id="last-name-field">
+                            <small>Hay un error</small>
+                        </div>
+                        <div class="checkout-form" id="checkout-form">
+                            <label for=" email-field" class="required">Email</label>
+                            <input type="email" id="email-field">
+                            <small>Hay un error</small>
+                        </div>
+                        <div class="checkout-form" id="checkout-form">
+                            <label for="phone-field" class="required">Teléfono</label>
+                            <input type="text" id="phone-field">
+                            <small>Hay un error</small>
+                        </div>
+                        <div class="checkout-form" id="checkout-form">
+                            <label for="adress-field" class="required">Dirección</label>
+                            <input type="text" id="adress-field">
+                            <small>Hay un error</small>
+                        </div>
+                        <div class="checkout-form" id="checkout-form">
+                            <label for="city-field" class="required">Ciudad</label>
+                            <input type="text" id="city-field">
+                            <small>Hay un error</small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="additional-info">
+                    <h3>Información adicional</h3>
+                    <label for="city-field">Ingresa tus comentarios (opcional)</label>
+                    <textarea name="textarea" rows="5" cols="100%" id="additional-info"></textarea>
+                </div>
+
+                <div class="checkout-order">
+                    <table class="checkout-products">
+                        <thead>
+                            <tr class="thead">
+                                <th class="table-70">Producto</th>
+                                <th class="table-30">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-items">
+                            <!-- Acá se renderizan los productos del carrito -->
+                        </tbody>
+                        <tfoot>
+                            <tr class="subtotal" id="tfoot-subtotal">
+                                <!-- Acá se imprime el subtotal -->
+                            </tr>
+                            <tr class="shipping-total" id="tfoot-shipping">
+                                <!-- Acá se imprime el envio -->
+                            </tr>
+                            <tr class="order-total" id="order-total">
+                                <!-- Acá se imprime el total -->
+                            </tr>
+                        </tfoot>
+
+                    </table>
+
+                    <div class="checkout-payment">
+                        <div class="medio-de-pago">
+                            <input type="radio" id="mercado-pago" checked>
+                            <label>Pagar con MercadoPago</label>
+                            <div class="checkout-payment-details">
+                                <p>Podés pagar con débito o crédito</p>
+                                <div class="flechita">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="medio-de-pago">
+                            <input type="radio" id="efectivo">
+                            <label>Pagar en Efectivo</label>
+                            <div class="checkout-payment-details">
+                                <p>Podés pagar en efectivo o con tarjeta</p>
+                                <div class="flechita">
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                    <button class="finalizar-compra" id="finalizar-compra">Finalizar Compra</button>
+                </div>
+            </div>
     
 </section>
 
