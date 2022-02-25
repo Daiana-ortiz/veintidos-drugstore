@@ -258,15 +258,23 @@ const categorias = () => {
     procesarPedidoBtn.addEventListener('click', (e) => {procesarPedido(e)});
 
     function procesarPedido(e){
-        e.preventDefault();
+        
 
         if( miLocalStorage.length === 0 ){
             alert("El carrito esta vacio, agregá algun producto")
         } else {
-            location.href = "checkout.html";
+            alert("Desea confirmar la compra?");
+            vaciarCarrito()
+            alert("Muchas gracias por tu compra!")
+            window.scroll({
+                top: 0
+              });
+
         }
         
     }
+
+    
 
 
 
